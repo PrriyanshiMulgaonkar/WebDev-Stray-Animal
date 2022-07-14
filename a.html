@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.cont{
+                    background-color: white;
+                    margin-left: 150px;
+                    width: 30%;
+                    text-align: center;
+                    align-content: center;
+                    margin-top:100px;
+                }
+                .content{
+                    /* margin-left: 100%; */
+                    text-align: center;
+                    align-content: center;
+                }
+                #nav_head {
+            width: 33.33%;
+            text-align: right;
+            margin-left: 120px;
+        }
+
+        #nav_head button {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 10px;
+            border-radius: 50px;
+        }
+
+        .navtopics {
+            display: flex;
+            width: 100px;
+            align-items: center;
+            /* background-color: white; */
+            margin-left: 15px;
+            padding: 15px;
+        }
+
+        .navtopics a {
+            color: black;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .navtopics a:hover {
+            color: blue;
+            background-color: rgba(128, 128, 128, 0.5);
+            padding: 3px 3px;
+            border-radius: 40px;
+        }
+
+</style>
+</head>
+<body>
+  <section class="navigation">
+    <div class="navtopics">
+      <a href="user_home.php">Home</a>
+      <a href="user_donate.html">Donation</a>
+        <a href="logout.php">Logout</a>
+        <a href="history.php">History</a>
+    </div>
+    <hr>
+</section>
+    <body background="bgg.jpg">
+        <center>
+        <div class="cont">
+        
+          <div>
+          <br>
+            <div class="content">
+              <img src="logoo.png" alt="Logo" style="width:30%">
+              <h1>Ashiyana</h1>
+              <!-- <p>Adoption page</p> -->
+              <br>
+            </div>
+<h3>Adoption Form</h3>
+
+<div class="container">
+  <form action="insertion.php" method = "post">
+    <!-- <input type="text" name="request" value="request" readonly hidden> -->
+    <input type="text" name="user" value="adop_form" readonly hidden>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+    <label for="Mobile"> Current Mobile No.</label>
+    <input type="text" id="Mobile" name="Mobile" placeholder="Your Mobile No..">
+
+    <label for="question">Do you ever had pets?</label>
+    <select id="question" name="question">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="subject">Why do you want to adopt?</label>
+    <textarea id="subject" name="subject" placeholder="Write you answer" style="height:200px"></textarea>
+
+    <!-- <input type="submit" value="Submit"> -->
+    <button onclick="alert('Thank You! For your adotion request. We will contact you soon')">Request</button>
+  </form>
+</div>
+</div>
+</div>
+</center>
+</body>
+</html>

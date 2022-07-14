@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<title>Website-LogIn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        function init()
+        {
+            nam = document.getElementById('email');
+            pass = document.getElementById('password');
+            err1 = document.getElementById('err1');
+            err2 = document.getElementById('err2');
+
+            console.log(nam+" : : "+err);
+        }
+
+        function validation() {
+            var nm = nam.value;
+            var pas = pass.value;
+            if (nm.length == 0)
+            {
+                err1.innerHTML = "Please enter your mail id";
+                err1.style.color = "red";
+            }
+            else
+            {
+                err1.innerHTML = "";
+            }
+            if (pas.length == 0)
+            {
+                err2.innerHTML = "Please enter your password";
+                err2.style.color = "red";
+            }
+            else if (pas.length<5 && pas.length>0) {
+                err2.innerHTML = "Please enter password in 5-8 digit";
+                err2.style.color = "red";
+            }
+            else
+            {
+                err2.innerHTML = "";
+            }
+
+            if (nm=="" && pas=="") {
+                alert("enter your details");
+                // window.location.replace = "log_in.html";
+            }
+        }
+        // function blank() {
+        //     if (nm=="" || pas=="") {
+        //         alert("enter your details");
+        //         window.location="log_in.html";
+        //     }
+        
+    </script>
+    <style>
+    body {
+      background-image: 'ngo bg.jpg';
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+</head>
+
+<body background="ngo bg.jpg" onload="init()">
+
+<div class="w3-container">
+
+  <div class="w3-card-4 w3-white w3-display-right w3-padding w3-round-large" style="width:30%; margin-right: 100px;">
+  <br>
+    <div class="w3-container w3-center">
+      <img src="logoo.png" alt="Logo" style="width:30%">
+      <h1>Ashiyana</h1>
+      <h6>Sign In Your NGO Account</h6>
+      <br>
+
+      <form action="loggingin.php" method="get">
+          <input type="text" name="user" value="ngo" readonly hidden>
+          <input type="text" id="type" name="type" value="ngo" readonly hidden>
+      
+        <input type="text" id="email" name="email" placeholder="Enter your Mail Id" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px; font-style: oblique;" onblur="validation()" required>
+        <br>
+        <span id="err1" style="font-size: 10px;"></span>
+        <br>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Enter your Password" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px;font-style: oblique;" onclick="validation" required>
+        <br>
+        <span id="err2" style="font-size: 10px;"></span>
+        <br>
+        <br>
+
+
+      <div class="w3-section">
+        <button type="submit" class="w3-button w3-black" style="width:30%; border: 2px solid; border-radius: 12px; padding: 5px;" onclick="validation">Sign In</button>
+      </div>
+      </form>
+      <h5>OR</h5>
+      <div>
+        <form action="ngo_create.html">
+        <button class="w3-button w3-black" style="width:30%; border: 2px solid; border-radius: 12px; padding: 5px;">Create Account</button>
+        </form>
+      </div> 
+
+  </div>
+</div>
+
+</body>
+</html>

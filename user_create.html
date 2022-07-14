@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>Website-LogIn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+    <style>
+    body {
+      background-image: 'c_acc.jpg';
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+    <script>
+      function init()
+        {
+            nam = document.getElementById('mail')
+            pass = document.getElementById('pass');
+            cpass = document.getElementById('cpass');
+            mob = document.getElementById('phone');
+
+            err1 = document.getElementById('err1');
+            err2 = document.getElementById('err2');
+            err3 = document.getElementById('err3');
+            err4 = document.getElementById('err4');
+
+            console.log(nam+" : : "+err);
+        }
+
+        function validation() {
+            var nm = nam.value;
+            var pas = pass.value;
+            var cpas = cpass.value;
+            var phn = mob.value;
+            if (nm.length == 0)
+            {
+                err1.innerHTML = "Please enter your mail";
+                err1.style.color = "red";
+            }
+            else
+            {
+                err1.innerHTML = "";
+            }
+            if (pas.length == 0)
+            {
+                err2.innerHTML = "Please enter your password";
+                err2.style.color = "red";
+            }
+            else if (pas.length<5 && pas.length>0) {
+                err2.innerHTML = "Please enter password in 5-8 digit";
+                err2.style.color = "red";
+            }
+            else
+            {
+                err2.innerHTML = "";
+            }
+            
+            if (cpas.length == 0)
+            {
+                err4.innerHTML = "Please re-enter password";
+                err4.style.color = "red";
+            }
+            
+            if (phn.length == 0)
+            {
+                err3.innerHTML = "Please enter your mobile no";
+                err3.style.color = "red";
+            }
+            else if (isNaN(phn))
+            {
+                err3.innerHTML = "Please enter only numeric digit";
+                err3.style.color = "red";
+            }
+            else if (phn.length<10 || phn.length>10) {
+                err3.innerHTML = "Plz enter 10 digit mobile no";
+                err3.style.color = "red";
+            }
+            else
+            {
+                err3.innerHTML = "";
+            }   
+        }
+
+        function checkpass() {
+            if (cpass.value != pass.value)
+            {
+                err4.innerHTML = "Password didn't match...";
+                err4.style.color = "red";
+            }
+            else
+            {
+                err4.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+
+<body background="c_acc.jpg" onload="init()">
+
+<div class="w3-container">
+
+  <div class="w3-card-4 w3-white w3-display-right w3-padding w3-round-large" style="width:30%; margin-right: 100px;">
+  <br>
+    <div class="w3-container w3-center">
+      <img src="logoo.png" alt="Logo" style="width:30%">
+      <h1>Ashiyana</h1>
+      <h6>Create Your User Account</h6>
+      <br>
+
+      <form action="insertion.php" method="post">
+        <input type="text" name="user" value="user" readonly hidden>
+      
+        <input type="email" id="mail" name="mail" onblur="validation()" placeholder="Enter your Mail Id" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px; font-style: oblique;">
+        <br>
+        <span id="err1" style="font-size: 10px;"></span>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Enter your Name" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px; font-style: oblique;">
+        <br>
+        <br>
+        <input type="text" id="phone" name="phone" onclick="validation()" placeholder="Enter your Contact Number" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px; font-style: oblique;">
+        <br>
+        <span id="err3" style="font-size: 10px;"></span>
+        <br>
+        <input type="text" id="address" name="address" placeholder="Enter your City" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px;font-style: oblique;">
+        <br>
+        <br>
+        <input type="password" id="pass" name="pass" onclick="validation()" placeholder="Create your Password" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px;font-style: oblique;">
+        <br>
+        <span id="err2" style="font-size: 10px;"></span>
+        <br>
+        <input type="password" id="cpass" name="cpass" placeholder="Confirm your Password" style="width:80%; border: 2px solid; border-radius: 12px; padding: 5px;font-style: oblique;" onclick="checkpass()">
+        <br>
+        <span id="err4" style="font-size: 10px;"></span>
+        <br>
+
+
+
+      <div class="w3-section">
+        <button type="submit" class="w3-button w3-black" style="width:30%; border: 2px solid; border-radius: 12px; padding: 5px;" onclick="validation()">Sign up</button>
+      </div>
+      </form>
+      <!-- <h5>OR</h5>
+      <div>
+        <form action="logged_in.html">
+        <button class="w3-button w3-black" style="width:30%; border: 2px solid; border-radius: 12px; padding: 5px;">login</button>
+        </form>
+      </div> -->
+      <!-- <br>
+    </div> -->
+
+  </div>
+</div>
+
+</body>
+</html>

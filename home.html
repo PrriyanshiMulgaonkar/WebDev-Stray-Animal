@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashiyana</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 50px;
+            background-color: #f09ea3;
+            /* opacity: 33%; */
+            display: flex;
+        }
+        .logo{
+            width: 33.33%;
+            /* background-color: blanchedalmond; */
+        }
+        .logo img{
+            margin-top: 5px;
+            width: 60px;
+        }
+        #name{
+            margin: 10px;
+            /* background-color: blanchedalmond; */
+            width: 33.33%;
+        }
+        #nav_head{
+            /* position: static; */
+            /* flex: right; */
+            background: rosybrown;
+            width: 100%;
+            text-align: right;
+            /* margin-right: 90%; */
+        }
+        #nav_head button{
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 15px;
+            background-color:whitesmoke;
+        }
+        .navtopics{
+            width: 50px;
+            align-items: center;
+            background-color: white;
+            margin-left: 15px;
+            padding:15px;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .about{
+            background-color: black;
+            height: 400px;
+            color: white;
+            text-align: center;
+            /* display: flex; */
+        }
+        .about p{
+            padding-top: 20px;
+        }
+        #sec_part{
+        display: flex;
+        margin-top: 20px;
+        }
+        .heads{
+            font-size: 30px;
+        }
+        .history{
+            width: 45%;
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin-right:10px
+        }
+        .mission{
+            width: 45%;
+            background-color: white;
+            color: black;
+            padding: 20px
+        }
+        .help{
+            padding-top: 20px;
+            height: 200px;
+            text-align: center;
+        }
+        .help p{
+            padding-top: 20px;
+        }
+        #donate img{
+            padding-top: 10px;
+            width: 20px;
+        }
+        .cont{
+            padding: 5px;
+            background-color: black;
+            height: 250px;
+            color: white;
+        }
+        .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(164, 61, 61, 0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.user_menu {
+            display: none;
+            position: absolute;
+            background-color: pink;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            z-index: 2;
+            text-align: right;
+            margin-left: 92%;
+        }
+
+        .user:hover .user_menu {
+            display: block;
+        }
+
+        .user_menu a {
+            text-decoration: none;
+            color: black;
+            margin-top: 10px;
+            margin-right: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="user">
+        <!-- <img src="../images/user.png" alt="user" id="ui"> -->
+        <div id="nav_head">
+        <button class="btn">Sign In</button>
+        <div class="user_menu">
+            <a href="ngo.html">NGO</a><br>
+            <hr>
+            <hr>
+            <a href="login.html">User</a>
+            <hr>
+            <hr>
+        </div>
+            <!-- <a href="../php/logout.php">Log Out</a>
+            <hr>
+            <hr> -->
+        </div>
+    </div>
+    <section class="top">
+        <div class="logo">
+            <img src="img/logo1.png" alt="logo">
+        </div>
+        <div id="name">
+            <center>
+                <h1>Ashiyana</h1>
+            </center>
+        </div>
+        <!-- <div id="nav_head">
+            <a href="login.html"><button class="button2">As User</button></a>
+            <a href="ngo.html"><button class="button2">As NGO</button></a>
+        </div> -->
+    </section>
+    <!-- <section class="navigation">
+        <div class="navtopics">
+            <a href="home">Home</a>
+        </div> -->
+    <!-- </section> -->
+    <section>
+        <div class="banner">
+            <img src="ban.png" alt="banner - Ashiyana">
+        </div>
+    </section>
+    <section class="about">
+        <div class="a_us">
+            <b><p class="heads">About Us</p></b>
+            <p style="font-size :20px;">A Winning Team</p>
+            <p>Our amazing team of volunteers are committed to helping animals in our community. We take our convictions and turn them into action. Think  you would be a good fit? See our contact page for more information!</p>
+        </div>
+        <div id = "sec_part">
+        <div class="history">
+            <b><p class="heads">Our History</p></b>
+            <p>Seeing a nonprofit to support our community's animals, we formed our  organization to provide sensible solutions. We've grown considerably since then, all thanks to the helping hands of this amazing community!</p>
+        </div>
+        <div class="mission">
+            <b><p class="heads">Animals Are Our Mission</p></b>
+            <p>We focus on making the maximum positive effect. Our  members and volunteers provide the momentum we need.  Using community driven models, we take actions that make a long-lasting  difference.</p>
+        </div>
+    </div>
+    </section>
+    <section class="help">
+        <div>
+            <b><p style="font-size: 30px;">Help Our Cause</p></b>
+            <p>Your support and contributions will enable us to help these animals. Your generous donation will fund our mission.</p>
+        </div>
+        <div id="donate">
+            <b><p style="font-size: 20px;">Donate Now</p></b>
+            <img src="img/bhim.png" alt="Bhim Pay">
+            <img src="img/rupay.png" alt="rupay">
+            <img src="img/paytm.jpg" alt="paytm">
+            <img src="img/visa.png" alt="visa">
+        </div>
+    </section>
+    <section class="cont">
+        <center>
+            <table>
+            <form action="">
+                <tr><td><label for="name">Name : </label></td></tr>
+                <tr><td><input type="text" id="name" name="name"></td></tr><br><br>
+                <tr><td><label for="query">Enter Your Query : </label></td></tr>
+                <tr><td><input type="text" id="query" name="query"></td></tr><br><br>
+                <tr><td colspan="2"><input type="submit" value="Submit Query"></td></tr>
+            </form>
+        </table>
+        </center>
+    </section>
+    <div style="background-color: #f09ea3; height: 30px; padding-top: 5px;">
+        <center>
+        <p>ashiyana.com</p>
+    </center>
+    </div>
+</body>
+</html>
